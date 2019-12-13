@@ -24,7 +24,7 @@ ssl=true                                              #true|false create a port 
 maxconn=5                                             #max numer of connection to the server
 ```
 
-
+A sample of the resulting config can be found here: https://github.com/bdynamic/IPv4TOIPv6/blob/master/docu/example_result_haproxy.cfg
 
 Links
 -----
