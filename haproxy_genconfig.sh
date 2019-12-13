@@ -1,8 +1,10 @@
 #!/bin/bash
+#Pubished under GNU GENERAL PUBLIC LICENSE 3., Author: Birk Bremer
+#Project source: https://github.com/bdynamic/IPv4TOIPv6
 
-TEMPLATEPATH="./templates"
-ENTRYSPATH="./entries"
-DSTCONFIG="./haproxy.cfg.tmp"
+TEMPLATEPATH="<templates>"                #normally /etc/haproxy/templates
+ENTRYSPATH="<entries>"                    #normally /etc/haproxy/entries
+DSTCONFIG="<configfile>"                  #normally /etc/haproxy/haproxy.cfg
 
 
 #generate absolut paths
