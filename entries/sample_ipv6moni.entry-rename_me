@@ -1,0 +1,6 @@
+name="CONFIGNAME"                                     #name in the config to be used, must be unique
+url="blog.myblog.de"                                  #the full dns name
+ipv6="<ipv6>"           #the IPv6 adress 
+unencrypted=true                                      #true|false create a port 80 forward?
+ssl=true                                              #true|false create a port 443 forward?
+maxconn=5                                             #max numer of connection to the server
