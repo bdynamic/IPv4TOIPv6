@@ -1,9 +1,9 @@
 # IPv4TOIPv6
 Set of scripts for creating HAProxy configs for a IPv4TOIPv6 GW
 
-haproxy is then used for forwarding (on TCP layer) the traffic to the destinationserver via IPv6
+haproxy is then used for forwarding (on TCP layer) the traffic to the destinationserver via IPv6.
 haproxy is configured that connections via ipv4 and ipv6 are accepted and forwarded.
-because TCP is used the ssl connection will not terminate in the proxy --> end2end security from the browser to the fileserver is obtained. Using the sni extension in haproxy still different domain names can be forwarded to different servers.
+Because TCP is used the ssl connection will not terminate in the proxy --> end2end security from the browser to the fileserver is obtained. Using the sni extension in haproxy still different domain names can be forwarded to different servers (both encrypted and unencrypted).
 
 
 Installation
