@@ -32,5 +32,6 @@ I used the following resouces in creating this project:
 * How to create your own cert agency and certificates: https://legacy.thomas-leister.de/eine-eigene-openssl-ca-erstellen-und-zertifikate-ausstellen/
 * How to bind HAProxy to all interface on ipv6 AND ipv4: https://serverfault.com/questions/747895/bind-to-all-interfaces-for-ipv4-and-ipv6-in-haproxy (Hint: bind :::80 v4v6)
 * HA Proxy and virtual domains: http://badberg-online.com/2017/05/01/haproxy-mit-mehreren-domains-und-ssl/
+
 The following compenion project of mine can be used for updating the IPv6 adress on change (based on the myfritz service)
 * https://github.com/bdynamic/ipV6moni
