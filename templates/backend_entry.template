@@ -1,0 +1,4 @@
+backend <name>
+   timeout connect 10s
+   timeout server 1m
+   server <name> <ipv6>:80 check maxconn 5

@@ -1,0 +1,10 @@
+frontend rserve_frontend
+    bind :::80 v4v6
+    bind :::443 v4v6
+    timeout client  1m
+
+    tcp-request inspect-delay 5s
+    acl sslv3 req.ssl_ver 3
+    tcp-request content reject if sslv3
+    tcp-request content accept if { req_ssl_hello_type 1 }
+

@@ -1,0 +1,3 @@
+    acl <name>_ssl req_ssl_sni -i <url>
+    use_backend <name>_ssl if <name>_ssl
+    
