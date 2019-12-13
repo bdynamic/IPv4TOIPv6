@@ -13,6 +13,13 @@ ENTRYSPATH="$(realpath $ENTRYSPATH)"
 DSTCONFIG="$(realpath $DSTCONFIG)"
 
 
+
+#Check if root
+if [ $(whoami) != "root" ]; then
+  echo "You need to be root - exiting"
+  exit 1
+fi
+
 echo "Writing config to $DSTCONFIG"
 cat "$TEMPLATEPATH/global.template" >"$DSTCONFIG"
 cat "$TEMPLATEPATH/defaults.template" >>"$DSTCONFIG"
@@ -54,13 +61,13 @@ do
 
    if [ $unencrypted == true ]; then
    	 echo "Create unencrypted entry"
-   	 cat "$TEMPLATEPATH/backend_entry.template" | sed "s/<name>/$name/g" | sed "s/<ipv6>/$ipv6/g" >>"$DSTCONFIG"
+   	 cat "$TEMPLATEPATH/backend_entry.template" | sed "s/<name>/$name/g" | sed "s/<ipv6>/$ipv6/g" | sed "s/<maxconn>/$maxconn/g" >>"$DSTCONFIG"
    	 echo "" >>"$DSTCONFIG"
    fi
 
   if [ $ssl == true ]; then
    	 echo "Create encrypted entry"
-   	 cat "$TEMPLATEPATH/backend_ssl_entry.template" | sed "s/<name>/$name/g" | sed "s/<ipv6>/$ipv6/g" >>"$DSTCONFIG"
+   	 cat "$TEMPLATEPATH/backend_ssl_entry.template" | sed "s/<name>/$name/g" | sed "s/<ipv6>/$ipv6/g" | sed "s/<maxconn>/$maxconn/g" >>"$DSTCONFIG"
    	 echo "" >>"$DSTCONFIG"
   fi
 

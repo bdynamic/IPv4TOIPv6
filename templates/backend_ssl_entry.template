@@ -17,4 +17,4 @@ backend <name>_ssl
   stick store-response payload_lv(43,1) if serverhello
 
   option ssl-hello-chk
-  server <name>_ssl <ipv6>:443 check maxconn 5
+  server <name>_ssl <ipv6>:443 check maxconn <maxconn>
